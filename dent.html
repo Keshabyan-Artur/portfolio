@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Стоматология «Белый слон»</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#f6f9fb;--card:#fff;--fg:#122433;--muted:#5a6b78;--line:#dde6ec;--acc:#1b7fd6;--soft:#e7f2fc;--f:"Manrope",system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f);line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:18px;gap:12px}
+.logo{font-weight:800;font-size:19px}.logo i{font-style:normal;color:var(--acc)}.tel{font-weight:600}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;padding-block:40px 60px;align-items:start}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}}
+.badge{display:inline-block;background:var(--soft);color:var(--acc);font-weight:600;font-size:13px;padding:6px 12px;border-radius:99px}
+h1{font-size:clamp(34px,5.5vw,58px);line-height:1.08;font-weight:800;margin:16px 0 18px}
+.hero p{font-size:18px;color:var(--muted);margin:0 0 24px;max-width:520px}
+.stats{display:flex;gap:32px;flex-wrap:wrap}.stats b{display:block;font-size:26px}.stats span{color:var(--muted);font-size:14px}
+form{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:12px}
+form h2{margin:0;font-size:20px}label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+input,select{font:inherit;padding:12px;border:1px solid var(--line);border-radius:10px;color:var(--fg);background:var(--bg)}
+.btn{font:inherit;font-weight:700;background:var(--acc);color:#fff;border:0;padding:14px;border-radius:12px;cursor:pointer}
+.ok{color:var(--acc);font-weight:600;margin:0}
+section{padding-block:60px}h2.s{font-size:clamp(26px,4vw,38px);margin:0 0 24px}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.svc div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.svc b{display:block;font-size:17px}.svc span{color:var(--muted);font-size:14px}.svc em{font-style:normal;display:block;margin-top:10px;font-weight:700;color:var(--acc)}
+footer{padding-block:24px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+</style>
+<header><div class="wrap"><div class="logo">Белый <i>слон</i></div><div class="tel">+7 900 444-55-66</div></div></header>
+<div class="hero"><div class="wrap">
+  <div><span class="badge">Лечение без боли · Рассрочка 0%</span>
+  <h1>Стоматология, к которой не страшно идти</h1>
+  <p>Лечим под микроскопом, объясняем каждый шаг и называем цену до начала работ. Первичная консультация с планом лечения бесплатно.</p>
+  <div class="stats"><div><b>12 лет</b><span>работаем в городе</span></div><div><b>9 врачей</b><span>в штате клиники</span></div><div><b>4,9 ★</b><span>на картах</span></div></div></div>
+  <form id="f"><h2>Записаться на консультацию</h2>
+    <label>Имя<input id="n" required></label>
+    <label>Телефон<input id="p" type="tel" required placeholder="+7 900 000-00-00"></label>
+    <label>Что беспокоит<select id="s"><option>Болит зуб</option><option>Профгигиена</option><option>Имплантация</option><option>Брекеты и элайнеры</option></select></label>
+    <button class="btn">Записаться бесплатно</button>
+    <p class="ok" id="ok" hidden>Спасибо! Администратор перезвонит в течение 10 минут.</p></form>
+</div></div>
+<section><div class="wrap"><h2 class="s">Услуги и цены</h2><div class="svc">
+  <div><b>Лечение кариеса</b><span>пломба светового отверждения</span><em>от 3 900 ₽</em></div>
+  <div><b>Профгигиена</b><span>Air Flow, ультразвук, фторирование</span><em>4 500 ₽</em></div>
+  <div><b>Имплант под ключ</b><span>имплант, абатмент, коронка</span><em>от 45 000 ₽</em></div>
+  <div><b>Элайнеры</b><span>3D-план лечения в подарок</span><em>от 120 000 ₽</em></div>
+</div></div></section>
+<footer><div class="wrap">© Белый слон · Демо-проект для портфолио. Имеются противопоказания, нужна консультация специалиста.</div></footer>
+<script>document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').hidden=false;e.target.reset();});</script>
+</html>

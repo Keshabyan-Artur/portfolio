@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кофейня «Зерно и пар»</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3ede4;--card:#fffaf2;--fg:#2b1f17;--muted:#7a6656;--line:#e0d4c4;--acc:#2f5d50;--display:"Prata",Georgia,serif;--body:"Golos Text",system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:20px}
+.logo{font-family:var(--display);font-size:22px}nav{display:flex;gap:20px;font-size:14px}nav a{color:var(--muted);text-decoration:none}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:40px 64px}
+@media(max-width:800px){.hero .wrap{grid-template-columns:1fr}}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,6.5vw,72px);line-height:1.05;margin:0 0 20px}
+.hero p{font-size:18px;color:var(--muted);max-width:480px;margin:0 0 28px}
+.btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;padding:14px 26px;border-radius:99px;font-weight:600}
+.cup{aspect-ratio:1;max-width:100%;border-radius:50%;background:radial-gradient(circle at 50% 50%,#6b4430 0 34%,#8a5a3c 35% 40%,#f3ede4 41% 52%,#d9c9b3 53% 56%,var(--card) 57%);box-shadow:0 30px 60px rgba(43,31,23,.15)}
+section{padding-block:64px;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,4vw,42px);margin:0 0 28px}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 40px}
+.it{display:flex;justify-content:space-between;gap:12px;padding-block:12px;border-bottom:1px dashed var(--line)}
+.it span{color:var(--muted);font-size:14px;display:block}.it b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.info div{background:var(--card);padding:22px;border-radius:16px}.info b{display:block;font-family:var(--display);font-size:20px;margin-bottom:4px}
+footer{padding-block:24px;color:var(--muted);font-size:13px}
+</style>
+<header><div class="wrap"><div class="logo">Зерно и пар</div><nav><a href="#menu">Меню</a><a href="#info">Как найти</a></nav></div></header>
+<div class="hero"><div class="wrap">
+  <div><h1>Кофе, ради которого стоит выйти пораньше</h1>
+  <p>Обжариваем зерно сами каждую неделю. Завтраки до 13:00, свежая выпечка с 8 утра и тихие места с розетками.</p>
+  <a class="btn" href="#menu">Смотреть меню</a></div>
+  <div class="cup" role="img" aria-label="Чашка капучино сверху"></div>
+</div></div>
+<section id="menu"><div class="wrap"><h2>Меню</h2><div class="menu">
+  <div class="it"><div>Эспрессо<span>30 мл, моносорт Эфиопия</span></div><b>160 ₽</b></div>
+  <div class="it"><div>Капучино<span>250 / 350 мл</span></div><b>220 ₽</b></div>
+  <div class="it"><div>Флэт уайт<span>двойной ристретто</span></div><b>250 ₽</b></div>
+  <div class="it"><div>Раф лавандовый<span>350 мл</span></div><b>290 ₽</b></div>
+  <div class="it"><div>Круассан с миндалём<span>выпечка дня</span></div><b>210 ₽</b></div>
+  <div class="it"><div>Сырники со сметаной<span>завтрак до 13:00</span></div><b>340 ₽</b></div>
+</div></div></section>
+<section id="info"><div class="wrap"><h2>Как найти</h2><div class="info">
+  <div><b>ул. Лесная, 5</b>2 минуты от остановки «Парк»</div>
+  <div><b>8:00–22:00</b>каждый день</div>
+  <div><b>+7 900 222-33-44</b>соберём заказ к приходу</div>
+</div></div></section>
+<footer><div class="wrap">© Зерно и пар · Демо-проект для портфолио</div></footer>
+</html>
