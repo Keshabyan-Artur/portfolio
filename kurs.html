@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}</style>
+<title>Курс «Английский без зубрёжки»</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;700&display=swap">
+<style>
+/* Layout: яркая продающая — крупный оффер на жёлтом, программа по неделям, тарифы, отзывы, заявка */
+:root{
+  --bg:#fffdf5; --sun:#ffd23f; --ink:#15151f; --muted:#5a5a6b; --card:#ffffff; --line:#ebe5cf; --hot:#ff5a36;
+  --display:"Unbounded","Arial Black",sans-serif; --body:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top{background:var(--sun)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:18px;gap:12px}
+.logo{font-family:var(--display);font-weight:900;font-size:16px}
+.chip{background:var(--ink);color:var(--sun);font-size:13px;font-weight:700;padding:6px 12px;border-radius:99px}
+.hero .wrap{padding-block:40px 72px}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(36px,7.4vw,84px);line-height:1;margin:0 0 24px;text-wrap:balance;letter-spacing:-.02em}
+h1 u{text-decoration:none;background:var(--ink);color:var(--sun);padding:0 .15em}
+.hero p{font-size:19px;max-width:560px;margin:0 0 32px;font-weight:500}
+.cta{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{font:inherit;font-weight:700;font-size:17px;background:var(--hot);color:#fff;border:0;padding:16px 30px;border-radius:99px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{transform:translateY(-1px)}.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.cta small{font-weight:500}
+section{padding-block:72px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,4.4vw,42px);margin:0 0 32px;text-wrap:balance}
+.for{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.for div{border:2px solid var(--ink);border-radius:18px;padding:20px;font-weight:500}
+.for b{display:block;font-family:var(--display);font-size:16px;margin-bottom:6px}
+.weeks{display:grid;gap:0;border-top:2px solid var(--ink)}
+.wk{display:grid;grid-template-columns:120px 1fr;gap:20px;padding-block:20px;border-bottom:1px solid var(--line)}
+@media(max-width:560px){.wk{grid-template-columns:1fr;gap:4px}}
+.wk .n{font-family:var(--display);font-weight:700}
+.wk h3{margin:0 0 4px;font-size:18px}.wk p{margin:0;color:var(--muted)}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;align-items:stretch}
+.plan{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.plan.best{border-color:var(--ink);box-shadow:8px 8px 0 var(--sun)}
+.plan h3{margin:0;font-family:var(--display);font-size:20px}
+.plan .pr{font-family:var(--display);font-weight:900;font-size:34px;font-variant-numeric:tabular-nums}
+.plan .pr s{font-size:16px;color:var(--muted);font-weight:500;margin-left:8px}
+.plan ul{margin:0;padding-left:18px;color:var(--muted);flex:1}
+.plan .btn{text-align:center}
+.badge{align-self:flex-start;background:var(--sun);font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.rev{background:var(--card);border-radius:18px;padding:22px;border:1px solid var(--line)}
+.rev p{margin:0 0 12px}.rev b{font-size:14px}.rev span{color:var(--muted);font-size:14px}
+.form{background:var(--ink);color:var(--bg);border-radius:28px;padding:clamp(24px,5vw,48px);display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media(max-width:760px){.form{grid-template-columns:1fr}}
+.form h2{color:var(--sun);margin-bottom:12px}
+form{display:grid;gap:12px}
+input{font:inherit;padding:14px 18px;border-radius:99px;border:0;background:var(--bg);color:var(--ink)}
+input:focus{outline:3px solid var(--sun)}
+.ok{color:var(--sun);font-weight:700;margin:0}
+footer{padding-block:28px;color:var(--muted);font-size:13px}
+</style>
+
+<div class="top">
+<header><div class="wrap"><div class="logo">ENGLISH/FLOW</div><span class="chip">Старт 10 ноября</span></div></header>
+<div class="hero"><div class="wrap">
+  <h1>Заговори на английском <u>за 8 недель</u></h1>
+  <p>Онлайн-курс для взрослых, которые учили язык в школе и всё забыли. 20 минут в день, живые созвоны с преподавателем, никакой зубрёжки правил.</p>
+  <div class="cta"><a class="btn" href="#join">Записаться на пробный урок</a><small>Первый урок бесплатно</small></div>
+</div></div>
+</div>
+
+<section><div class="wrap">
+  <h2>Курс для тебя, если</h2>
+  <div class="for">
+    <div><b>Понимаешь, но молчишь</b>Читаешь текст, а на созвоне не можешь связать двух слов.</div>
+    <div><b>Нужен язык для работы</b>Переписка с иностранцами, собеседование, переезд.</div>
+    <div><b>Бросал приложения</b>Duolingo надоел через неделю, а результата так и нет.</div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Программа</h2>
+  <div class="weeks">
+    <div class="wk"><div class="n">Недели 1–2</div><div><h3>Снимаем барьер</h3><p>Базовые фразы для любой ситуации, первая беседа с преподавателем.</p></div></div>
+    <div class="wk"><div class="n">Недели 3–4</div><div><h3>Времена без таблиц</h3><p>Говорим о прошлом и планах через живые истории, а не схемы.</p></div></div>
+    <div class="wk"><div class="n">Недели 5–6</div><div><h3>Работа и путешествия</h3><p>Письма, звонки, отель, аэропорт, small talk.</p></div></div>
+    <div class="wk"><div class="n">Недели 7–8</div><div><h3>Свободная речь</h3><p>Дискуссии в мини-группах, финальный созвон на 15 минут только на английском.</p></div></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Тарифы</h2>
+  <div class="plans">
+    <div class="plan"><h3>Сам</h3><div class="pr">6 900 ₽</div><ul><li>Все видеоуроки и задания</li><li>Чат курса</li><li>Доступ на 6 месяцев</li></ul><a class="btn" href="#join">Выбрать</a></div>
+    <div class="plan best"><span class="badge">Чаще всего берут</span><h3>С куратором</h3><div class="pr">14 900 ₽<s>19 900</s></div><ul><li>Всё из тарифа «Сам»</li><li>8 созвонов в мини-группе</li><li>Проверка заданий куратором</li></ul><a class="btn" href="#join">Выбрать</a></div>
+    <div class="plan"><h3>Личный</h3><div class="pr">29 900 ₽</div><ul><li>Всё из «С куратором»</li><li>8 индивидуальных уроков</li><li>План под твою цель</li></ul><a class="btn" href="#join">Выбрать</a></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Что говорят ученики</h2>
+  <div class="revs">
+    <div class="rev"><p>Через полтора месяца впервые нормально поговорила с клиентом из Германии. Без паники.</p><b>Марина</b> <span>· маркетолог</span></div>
+    <div class="rev"><p>Учил язык 11 лет в школе и вузе. Тут за 8 недель начал говорить. Обидно, но приятно.</p><b>Олег</b> <span>· инженер</span></div>
+    <div class="rev"><p>Удобно, что уроки короткие. Занимаюсь в метро по дороге на работу.</p><b>Алина</b> <span>· бухгалтер</span></div>
+  </div>
+</div></section>
+
+<section id="join" style="padding-top:0"><div class="wrap">
+  <div class="form">
+    <div><h2>Пробный урок бесплатно</h2><p>Определим твой уровень за 20 минут и покажем, как проходят занятия. Ни к чему не обязывает.</p></div>
+    <form id="f">
+      <input id="name" required placeholder="Имя" aria-label="Имя">
+      <input id="phone" type="tel" required placeholder="Телефон или Telegram" aria-label="Телефон или Telegram">
+      <button class="btn" type="submit">Хочу на пробный</button>
+      <p class="ok" id="ok" hidden>Записали! Напишем в течение часа.</p>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© English/Flow · Демо-проект для портфолио</div></footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').hidden=false;e.target.reset();});
+</script>

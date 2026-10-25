@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}</style>
+<title>Барбершоп «Опасная бритва»</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+/* Layout: тёмная витрина — большой заголовок, прайс как табличка на стене, мастера, запись */
+:root{
+  --bg:#141210; --panel:#1d1a17; --line:#3a332b; --fg:#efe7dc; --muted:#a99c8b; --brass:#c9a45c;
+  --display:"Oswald","Arial Narrow",sans-serif; --body:"Golos Text",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:20px;gap:16px;flex-wrap:wrap}
+.logo{font-family:var(--display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:18px}
+.logo span{color:var(--brass)}
+nav{display:flex;gap:20px;font-size:14px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--fg)}
+.hero{padding-block:72px 56px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+h1{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(44px,9vw,104px);line-height:.95;margin:16px 0 24px;text-wrap:balance}
+.hero p{max-width:520px;color:var(--muted);font-size:18px;margin:0 0 32px}
+.btn{display:inline-block;background:var(--brass);color:#141210;font-weight:600;padding:14px 28px;border:0;font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{filter:brightness(1.1)}.btn:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.facts{display:flex;gap:40px;margin-top:48px;flex-wrap:wrap}
+.facts b{display:block;font-family:var(--display);font-size:32px;color:var(--fg)}
+.facts span{font-size:13px;color:var(--muted)}
+section{padding-block:72px}
+h2{font-family:var(--display);text-transform:uppercase;font-size:clamp(28px,5vw,44px);margin:0 0 32px;letter-spacing:.02em}
+.price{border:1px solid var(--line);background:var(--panel);padding:8px 28px}
+.row{display:flex;align-items:baseline;gap:12px;padding-block:16px;border-bottom:1px dashed var(--line)}
+.row:last-child{border:0}
+.row .n{font-weight:500}.row .t{color:var(--muted);font-size:13px}
+.row .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:20px}
+.row .p{font-family:var(--display);font-size:22px;color:var(--brass);font-variant-numeric:tabular-nums;white-space:nowrap}
+.masters{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.m{border-top:2px solid var(--brass);padding-top:16px}
+.m .ph{aspect-ratio:4/5;max-width:100%;background:repeating-linear-gradient(135deg,var(--panel) 0 12px,#211d19 12px 24px);display:grid;place-items:center;font-family:var(--display);font-size:56px;color:var(--line);margin-bottom:16px}
+.m h3{margin:0;font-family:var(--display);font-size:22px;text-transform:uppercase}
+.m p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.book{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media(max-width:760px){.book{grid-template-columns:1fr}}
+form{display:grid;gap:14px}
+label{font-size:13px;color:var(--muted);display:grid;gap:6px}
+input,select{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:12px 14px;font:inherit}
+input:focus,select:focus{outline:2px solid var(--brass);outline-offset:0}
+.ok{color:var(--brass);font-weight:500}
+.contacts p{margin:0 0 12px}.contacts b{color:var(--fg)}
+footer{border-top:1px solid var(--line);padding-block:24px;color:var(--muted);font-size:13px}
+</style>
+
+<header><div class="wrap">
+  <div class="logo">Опасная <span>бритва</span></div>
+  <nav><a href="#price">Прайс</a><a href="#masters">Мастера</a><a href="#book">Запись</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Мужской барбершоп · с 2019 года</div>
+  <h1>Стрижка, после которой хочется в зеркало</h1>
+  <p>Классика, фейды и бритьё опасной бритвой с горячим полотенцем. Без очередей: записываешься онлайн и приходишь к своему времени.</p>
+  <a class="btn" href="#book">Записаться</a>
+  <div class="facts">
+    <div><b>4,9 ★</b><span>средняя оценка</span></div>
+    <div><b>45 мин</b><span>стрижка без спешки</span></div>
+    <div><b>10:00–22:00</b><span>без выходных</span></div>
+  </div>
+</div></div>
+
+<section id="price"><div class="wrap">
+  <h2>Прайс</h2>
+  <div class="price">
+    <div class="row"><div><div class="n">Мужская стрижка</div><div class="t">мытьё, укладка</div></div><i class="dots"></i><div class="p">1 500 ₽</div></div>
+    <div class="row"><div><div class="n">Фейд / скин-фейд</div><div class="t">переходы машинкой</div></div><i class="dots"></i><div class="p">1 800 ₽</div></div>
+    <div class="row"><div><div class="n">Моделирование бороды</div><div class="t">контур, масло</div></div><i class="dots"></i><div class="p">1 000 ₽</div></div>
+    <div class="row"><div><div class="n">Королевское бритьё</div><div class="t">опасная бритва, горячее полотенце</div></div><i class="dots"></i><div class="p">1 300 ₽</div></div>
+    <div class="row"><div><div class="n">Стрижка + борода</div><div class="t">комплекс</div></div><i class="dots"></i><div class="p">2 300 ₽</div></div>
+    <div class="row"><div><div class="n">Детская стрижка</div><div class="t">до 12 лет</div></div><i class="dots"></i><div class="p">1 000 ₽</div></div>
+  </div>
+</div></section>
+
+<section id="masters"><div class="wrap">
+  <h2>Мастера</h2>
+  <div class="masters">
+    <div class="m"><div class="ph">А</div><h3>Артём</h3><p>Топ-барбер, 7 лет. Классика и бороды.</p></div>
+    <div class="m"><div class="ph">Д</div><h3>Даниил</h3><p>4 года. Фейды, текстурные стрижки.</p></div>
+    <div class="m"><div class="ph">Р</div><h3>Руслан</h3><p>5 лет. Бритьё опасной бритвой.</p></div>
+  </div>
+</div></section>
+
+<section id="book"><div class="wrap book">
+  <div>
+    <h2>Запись</h2>
+    <form id="f">
+      <label>Имя<input id="name" required placeholder="Как к вам обращаться"></label>
+      <label>Телефон<input id="phone" type="tel" required placeholder="+7 900 000-00-00"></label>
+      <label>Услуга<select id="svc"><option>Мужская стрижка</option><option>Фейд / скин-фейд</option><option>Стрижка + борода</option><option>Королевское бритьё</option></select></label>
+      <label>Мастер<select id="master"><option>Любой свободный</option><option>Артём</option><option>Даниил</option><option>Руслан</option></select></label>
+      <button class="btn" type="submit">Отправить заявку</button>
+      <p class="ok" id="ok" hidden>Заявка принята. Администратор перезвонит в течение 15 минут.</p>
+    </form>
+  </div>
+  <div class="contacts">
+    <h2>Где мы</h2>
+    <p><b>ул. Пушкина, 12</b>, вход со двора</p>
+    <p>Телефон: <b>+7 900 123-45-67</b></p>
+    <p>Ежедневно с 10:00 до 22:00</p>
+    <p style="color:var(--muted);font-size:14px">Парковка у входа. Кофе и чай для гостей бесплатно.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© Опасная бритва · Демо-проект для портфолио</div></footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').hidden=false;e.target.reset();});
+</script>
